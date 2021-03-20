@@ -1,6 +1,21 @@
+if ($(window).width() < 991) {
+  $("#fullpage").removeAttr("id");
+}
+
 $(document).ready(function () {
   $("#fullpage").fullpage({
     responsiveWidth: 1200,
+  });
+});
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 80) {
+      $("header").css("background", "rgb(0, 0, 0, 0.8)");
+    } else {
+      $("header").css("background", "transparent");
+    }
   });
 });
 
@@ -31,7 +46,6 @@ function myFunction() {
   }
 }
 
-
 $(".hamburger-menu").click(function (e) {
   $(".mobile-menu").toggleClass("show-mobile-menu");
 });
@@ -41,8 +55,6 @@ $(document).ready(function () {
     $(this).toggleClass("open");
   });
 });
-
-
 
 (function ($) {
   // Begin jQuery
