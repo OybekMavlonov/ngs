@@ -11,7 +11,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll > 80) {
+    if (scroll > 90) {
       $("header").css("background", "rgb(0, 0, 0, 0.8)");
     } else {
       $("header").css("background", "transparent");
